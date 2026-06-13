@@ -8,12 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Install pylint
         run: pip install pylint
-      - name: Analyze code with pylint
-        run: pylint shopping_cart.py
+      - name: Analyze code with pylint 
+        run: pylint shopping_cart.py tests/
+      - name: Run tests
+        run: pyton -m unittest discover tests

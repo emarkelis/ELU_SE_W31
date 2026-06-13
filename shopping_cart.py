@@ -21,4 +21,3 @@ shopping_cart_total = CalculateTotal(CART)
 display_total(shopping_cart_total)
 
 #testing pylint worklfow 01
-
