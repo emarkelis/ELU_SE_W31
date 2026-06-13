@@ -16,7 +16,7 @@ jobs:
       - name: Install pylint
         run: pip install pylint
       - name: Run tests
-        run: pyton -m unittest discover tests
+        run: python -m unittest discover tests
       - name: Analyze code with pylint 
         run: pylint shopping_cart.py tests/
       
