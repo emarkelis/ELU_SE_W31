@@ -15,7 +15,8 @@ jobs:
           python-version: '3.11'
       - name: Install pylint
         run: pip install pylint
-      - name: Analyze code with pylint 
-        run: pylint shopping_cart.py tests/
       - name: Run tests
         run: pyton -m unittest discover tests
+      - name: Analyze code with pylint 
+        run: pylint shopping_cart.py tests/
+      
